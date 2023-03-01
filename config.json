@@ -1,0 +1,10 @@
+{
+    "db":{
+        "database":"testdb",
+        "username":"postgres",
+        "password":"1234",
+        "logging":false,
+        "host":"localhost",
+        "dialect":"postgres"
+    }
+}
