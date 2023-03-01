@@ -1,4 +1,4 @@
-const userService = require('../../services/productServices')
+const userService = require('../../services/userService')
 const Joi = require('joi');
 
 const {
