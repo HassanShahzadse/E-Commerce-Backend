@@ -3,32 +3,33 @@ let sequelize = require("../../common/dbConnection")
 class Product extends Model {};
 Product.init(
     {
-        productId:{
+        id:{
             primaryKey:true,
-            autoIncrement:true,
             allowNull:false,
+            autoIncrement:true,
             type:DataTypes.INTEGER,
         },
 
-        discription:{
+        title:{
             allowNull:false,
             type:DataTypes.STRING(),
         },
 
-        productPrice:{
+        description:{
             allowNull:false,
-            type:DataTypes.DOUBLE,
+            type:DataTypes.STRING(1234),
         },
 
         category:{
             allowNull:false,
             type:DataTypes.STRING(),
         },
-        brand:{
+        price:{
             allowNull:false,
-            type:DataTypes.STRING(),
+            type:DataTypes.DOUBLE,
         },
-        url:{
+        image:{
+            allowNull:false,
             type:DataTypes.STRING(),
         }
     },

@@ -13,9 +13,13 @@ module.exports = {
     
     //Product
     createProduct: require("./product/createProduct"),
+    createBulkProduct: require("./product/createBulkProduct"),
     getProduct: require("./product/getProduct"),
     updateProduct: require("./product/updateProduct"),
     deleteProduct: require("./product/deleteProduct"),
+    getProductByCategory: require("./product/getProductByCategory"),
     getProductById: require("./product/getProductById"),
+    //login
+    login:require('./common/login')
     
 }

@@ -23,9 +23,9 @@ updateUser: async function(body){
     const result = await userModel.updateUser(body);
     return result;
 },
-getUserById: async function(body){
+getUserById: async function(ids){
 
-    const result = await userModel.getUserById(body);
+    const result = await userModel.getUserById(ids);
     return result;
 },
 deleteUser: async function(id){

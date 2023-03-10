@@ -1,9 +1,14 @@
 const {models} = require("../model/definations")
-
+const data = require("../data.json")
 module.exports = {
     createProduct: async function(body){
 
         const result = await models.Product.create(body);
+        return result;
+    },
+    createBulkProduct: async function(){
+
+        const result = await models.Product.bulkCreate(data);
         return result;
     },
     getProduct: async function(){
@@ -13,10 +18,18 @@ module.exports = {
         });
         return result;
     },
-    getProductById: async function(ids){
+    getProductByCategory: async function(category){
 
         const result = await models.Product.findAll({
-            where:{id:ids},
+            where:{category:category},
+            
+        });
+        return result;
+    },
+    getProductById: async function(id){
+
+        const result = await models.Product.findAll({
+            where:{id:id},
             
         });
         return result;
@@ -28,7 +41,7 @@ module.exports = {
         ...body
         },
         {
-            where : {id: body.id}
+            where : {productId: body.id}
         }
         );
         return result;
@@ -37,11 +50,11 @@ module.exports = {
         
         const result = await models.Product.destroy(
             {
-                where : {id:id}
+                where : {productId:id}
             }
        
         );
-        return "Deleted a User";
+        return "Deleted a Product";
     },
 
 }
