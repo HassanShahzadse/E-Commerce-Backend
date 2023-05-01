@@ -4,7 +4,7 @@ This is a backend project for an E-commerce website using Express.js, a popular 
 # Getting Started
 To get started with the project, follow these steps:
 
-- Clone the repository: git clone https://github.com/Knowledge-Streams-KS/e-commerce-backend-HassanShahzadse.git
+- Clone the repository: git clone https://https://github.com/HassanShahzadse/E-commerce-Frontend-.git
 - Install dependencies: npm install
 - Start the server: npm start
 - You should now be able to access the API at http://localhost:5000.
